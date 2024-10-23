@@ -1,60 +1,183 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Моє Портфоліо</title>
+    <title>Portfolio</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Привіт, я Яськів Василь</h1>
         <nav>
+            <div class="logo">Portofolio</div>
             <ul>
-                <li><a href="#about">Про мене</a></li>
-                <li><a href="#skills">Навички</a></li>
-                <li><a href="#portfolio">Портфоліо</a></li>
-                <li><a href="#contact">Контакти</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
+        <section class="hero">
+            <div class="overlay">
+                <h1>Hello there, i`m vasyl Yaskiv, Game developer and pixelart artist from Ifano-Frankivsk</h1>
+                <p>3D Designer for you, from Ukraine</p>
+                <a href="#portfolio" class="btn">Latest works</a>
+            </div>
+        </section>
     </header>
 
-    <section id="about">
-        <h2>Про мене</h2>
-        <p>Я C# unity розробник який також вміє кодити на Java, знаю принципи C і C++.</p>
-    </section>
+    <main>
+        <section id="about" class="about">
+            <h2>About</h2>
+            <p>Abbout me, i teach in KEP, have a greate day</p>
+            <p>Chinazes</p>
+        </section>
 
-    <section id="skills">
-        <h2>Навички</h2>
-        <ul>
-            <li>C#</li>
-            <li>C</li>
-            <li>Java</li>
-            <li>C++</li>
-        </ul>
-    </section>
+        <section id="skills" class="skills">
+            <h2>Skills</h2>
+            <div class="skills-container">
+                <div class="profile-img">
+                    <img src="Images/Photo.jpg" alt="Profile Image">
+                </div>
 
-    <section id="portfolio">
-        <h2>Портфоліо</h2>
-        <div class="projects">
-            <div class="project">
-                <h3>Проект 1</h3>
-                <p>лабараторна робота №1.</p>
+                <div class="skills-info">
+                    <div class="skill-row">
+                        <span class="label">Profile</span>
+                        <span class="info">2D Designed, c# deweloper</span>
+                    </div>
+
+                    <div class="skill-row">
+                        <span class="label">2D Design</span>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 70%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-row">
+                        <span class="label">Tools</span>
+                        <span class="info">Aseprite</span>
+                    </div>
+
+                    <div class="skill-row">
+                        <span class="label">2D drowing and game dewelopment</span>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 80%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-row">
+                        <span class="label">Tools</span>
+                        <span class="info">Unity</span>
+                    </div>
+
+                    <div class="skill-row">
+                        <span class="label">C# Game Developer</span>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 65%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-row">
+                        <span class="label">Tools</span>
+                        <span class="info">C#, C, C++</span>
+                    </div>
+                </div>
             </div>
-            <div class="project">
-                <h3>Проект 2</h3>
-                <p>Опис проекту.</p>
+        </section>
+
+
+        <section id="portfolio" class="portfolio">
+            <h2>Portfolio</h2>
+            <div class="portfolio-container">
+                <div class="portfolio-description">
+                    <h3>Лаболаторні роботи:</h3>
+                    <p>Лаболаторна робота №1</p>
+                </div>
+                <div class="portfolio-images">
+                    <div class="image-row">
+                        <a href="Lab1/index.html" target="_blank">
+                            <img src="Images/1726381969656.png" alt="Portfolio image 1" class="hover-image">
+                        </a>
+                    </div>
+                </div>
+                
+
+                <div class="portfolio-description">
+                    <p>Лаболаторна робота №2</p>
+                </div>
+                <div class="portfolio-images">
+                    <div class="image-row">
+                        <a href="index.html" target="_blank">
+                            <img src="Images/1726381969656.png" alt="Portfolio image 1" class="hover-image">
+                        </a>
+                    </div>
+                </div>
+
+
+                <div class="portfolio-description">
+                    <p>Лаболаторна робота №3</p>
+                </div>
+                <div class="portfolio-images">
+                    <div class="image-row">
+                        <a href="Lab3/index.html" target="_blank">
+                            <img src="Images/1726381969656.png" alt="Portfolio image 1" class="hover-image">
+                        </a>
+                    </div>
+                </div>
+
+
+                <div class="portfolio-description">
+                    <p>Лаболаторна робота №4</p>
+                </div>
+                <div class="portfolio-images">
+                    <div class="image-row">
+                        <a href="Lab4/index.html" target="_blank">
+                            <img src="Images/1726381969656.png" alt="Portfolio image 1" class="hover-image">
+                        </a>
+                    </div>
+                </div>
+                
+                 <p>Лаболаторна робота №5</p>
+                </div>
+                <div class="portfolio-images">
+                    <div class="image-row">
+                        <a href="Lab4/index.html" target="_blank">
+                            <img src="Images/1726381969656.png" alt="Portfolio image 1" class="hover-image">
+                        </a>
+                    </div>
+                </div>
+
+
+
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="contact">
-        <h2>Контакти</h2>
-        <p>Email: [Ваш email]</p>
-    </section>
+        <footer id="contact" class="contact">
+            <h2>Get in Touch</h2>
+            <div class="contact-container">
+                <div class="social-links">
+                    <ul>
+                        <li><a href="#">Dribbble</a></li>
+                        <li><a href="#">Behance</a></li>
+                        <li><a href="#">CodePen</a></li>
+                        <li><a href="#">GitHub</a></li>
+                    </ul>
+                </div>
+                <div class="social-links">
+                    <ul>
+                        <li><a href="#">LinkedIn</a></li>
+                        <li><a href="#">TikTok</a></li>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Twitter(X)</a></li>
+                    </ul>
+                </div>
+                <div class="contact-info">
+                    <p><a href="mailto:email@example.c">vasyl.yaskiv-ki2101@kep.nung.edu.ua</a></p>
+                    <p>+38 097 902 9597</p>
+                </div>
+            </div>
+        </footer>
 
-    <footer>
-        <p>&copy; 2024 Ваше Ім'я</p>
-    </footer>
+    </main>
 </body>
 </html>
