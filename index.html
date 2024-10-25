@@ -1,183 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">Portofolio</div>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-        <section class="hero">
-            <div class="overlay">
-                <h1>Hello there, i`m vasyl Yaskiv, Game developer and pixelart artist from Ifano-Frankivsk</h1>
-                <p>3D Designer for you, from Ukraine</p>
-                <a href="#portfolio" class="btn">Latest works</a>
-            </div>
-        </section>
-    </header>
+    
 
-    <main>
-        <section id="about" class="about">
-            <h2>About</h2>
-            <p>Abbout me, i teach in KEP, have a greate day</p>
-            <p>Chinazes</p>
-        </section>
+  <header class="header">
+    <nav class="nav">
+      <div class="logo">Portofolio</div>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Skills</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="header-content">
+      <h1>Hello there, my name is Vasyl</h1>
+      <p>Im street photographer, and game developer</p>
+    </div>
+    
+  </header>
+  
 
-        <section id="skills" class="skills">
-            <h2>Skills</h2>
-            <div class="skills-container">
-                <div class="profile-img">
-                    <img src="Images/Photo.jpg" alt="Profile Image">
-                </div>
+  <section class="about">
+    <h2>About</h2>
+    <p>Abbout me, i teach in KEP, have a greate day</p>
+    <p>Who am i?</p>
+  </section>
 
-                <div class="skills-info">
-                    <div class="skill-row">
-                        <span class="label">Profile</span>
-                        <span class="info">2D Designed, c# deweloper</span>
-                    </div>
-
-                    <div class="skill-row">
-                        <span class="label">2D Design</span>
-                        <div class="progress-bar">
-                            <div class="progress" style="width: 70%;"></div>
-                        </div>
-                    </div>
-
-                    <div class="skill-row">
-                        <span class="label">Tools</span>
-                        <span class="info">Aseprite</span>
-                    </div>
-
-                    <div class="skill-row">
-                        <span class="label">2D drowing and game dewelopment</span>
-                        <div class="progress-bar">
-                            <div class="progress" style="width: 80%;"></div>
-                        </div>
-                    </div>
-
-                    <div class="skill-row">
-                        <span class="label">Tools</span>
-                        <span class="info">Unity</span>
-                    </div>
-
-                    <div class="skill-row">
-                        <span class="label">C# Game Developer</span>
-                        <div class="progress-bar">
-                            <div class="progress" style="width: 65%;"></div>
-                        </div>
-                    </div>
-
-                    <div class="skill-row">
-                        <span class="label">Tools</span>
-                        <span class="info">C#, C, C++</span>
-                    </div>
-                </div>
-            </div>
-        </section>
+  <section class="skills">
+    <h2>Skills</h2>
+    <div class="skills-content">
+      <img src="profile.jpg" alt="Profile Image">
+      <div class="skills-details">
+        <p><strong>Profile:</strong> 2D pixel art artist, Game Developer and .net dev </p>
+        <div><strong>2D pixel art artist</strong></div>
+        <div class="progress-bar">
+          <div class="progress" style="width: 80%;"></div>
+        </div>
+        <div><strong>Game Developer</strong></div>
+        <div class="progress-bar">
+          <div class="progress" style="width: 90%;"></div>
+        </div>
+        <div><strong>.net dev</strong></div>
+        <div class="progress-bar">
+          <div class="progress" style="width: 40%;"></div>
+        </div>
+      </div>
+    </div>
+</section>
 
 
-        <section id="portfolio" class="portfolio">
-            <h2>Portfolio</h2>
-            <div class="portfolio-container">
-                <div class="portfolio-description">
-                    <h3>Лаболаторні роботи:</h3>
-                    <p>Лаболаторна робота №1</p>
-                </div>
-                <div class="portfolio-images">
-                    <div class="image-row">
-                        <a href="Lab1/index.html" target="_blank">
-                            <img src="Images/1726381969656.png" alt="Portfolio image 1" class="hover-image">
-                        </a>
-                    </div>
-                </div>
-                
+  <section class="portfolio">
+    <h2>Portfolio</h2>
+    <div class="portfolio-content">
+      <div class="project">
+        <h3>Latest works</h3>
+        <p>Laboratorian works...</p>
+        <div class="button-container">
+          <a href="index1.html" class="btn">LB3</a>
+          <a href="index4.html" class="btn">LB4</a>
+          <a href="index5.html" class="btn">LB5</a>
+        </div>
+        
+      </div>
+    </div>
+  </section>
 
-                <div class="portfolio-description">
-                    <p>Лаболаторна робота №2</p>
-                </div>
-                <div class="portfolio-images">
-                    <div class="image-row">
-                        <a href="index.html" target="_blank">
-                            <img src="Images/1726381969656.png" alt="Portfolio image 1" class="hover-image">
-                        </a>
-                    </div>
-                </div>
+  <footer class="contact">
+    <h2>Get in Touch</h2>
+    <div class="contact-info">
+      <ul>
+        <li>Dribbble</li>
+        <li>Behance</li>
+        <li>CodePen</li>
+        <li>GitHub</li>
+        <li>Medium</li>
+      </ul>
+      <ul>
+        <li>LinkedIn</li>
+        <li>Facebook</li>
+        <li>Instagram</li>
+        <li>Twitter</li>
+      </ul>
+      <div class="contact-email">
+        <p>vasyl.yaskiv-ki2101@kep.nung.edu.ua</p>
+        <p>+380 979 029 597</p>
+      </div>
+    </div>
+  </footer>
 
-
-                <div class="portfolio-description">
-                    <p>Лаболаторна робота №3</p>
-                </div>
-                <div class="portfolio-images">
-                    <div class="image-row">
-                        <a href="Lab3/index.html" target="_blank">
-                            <img src="Images/1726381969656.png" alt="Portfolio image 1" class="hover-image">
-                        </a>
-                    </div>
-                </div>
-
-
-                <div class="portfolio-description">
-                    <p>Лаболаторна робота №4</p>
-                </div>
-                <div class="portfolio-images">
-                    <div class="image-row">
-                        <a href="Lab4/index.html" target="_blank">
-                            <img src="Images/1726381969656.png" alt="Portfolio image 1" class="hover-image">
-                        </a>
-                    </div>
-                </div>
-                
-                 <p>Лаболаторна робота №5</p>
-                </div>
-                <div class="portfolio-images">
-                    <div class="image-row">
-                        <a href="Lab4/index.html" target="_blank">
-                            <img src="Images/1726381969656.png" alt="Portfolio image 1" class="hover-image">
-                        </a>
-                    </div>
-                </div>
-
-
-
-            </div>
-        </section>
-
-        <footer id="contact" class="contact">
-            <h2>Get in Touch</h2>
-            <div class="contact-container">
-                <div class="social-links">
-                    <ul>
-                        <li><a href="#">Dribbble</a></li>
-                        <li><a href="#">Behance</a></li>
-                        <li><a href="#">CodePen</a></li>
-                        <li><a href="#">GitHub</a></li>
-                    </ul>
-                </div>
-                <div class="social-links">
-                    <ul>
-                        <li><a href="#">LinkedIn</a></li>
-                        <li><a href="#">TikTok</a></li>
-                        <li><a href="#">Instagram</a></li>
-                        <li><a href="#">Twitter(X)</a></li>
-                    </ul>
-                </div>
-                <div class="contact-info">
-                    <p><a href="mailto:email@example.c">vasyl.yaskiv-ki2101@kep.nung.edu.ua</a></p>
-                    <p>+38 097 902 9597</p>
-                </div>
-            </div>
-        </footer>
-
-    </main>
 </body>
 </html>
