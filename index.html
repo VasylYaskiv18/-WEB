@@ -1,104 +1,102 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
 
-  <header class="header">
-    <nav class="nav">
-      <div class="logo">Portofolio</div>
-      <ul class="nav-links">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Skills</a></li>
-        <li><a href="#">Portfolio</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
-    <div class="header-content">
-      <h1>Hello there, my name is Vasyl</h1>
-      <p>Im street photographer, and game developer</p>
+    <title>Our superheroes</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Faster+One" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+
+    <header>
+
+    </header>
+
+    <section>
+
+    </section>
+
+    <div class="language-switcher">
+      <button id="translate-ua">UA</button>
+      <button id="translate-en">EN</button>
     </div>
-    
-  </header>
-  
 
-  <section class="about">
-    <h2>About</h2>
-    <p>Abbout me, i teach in KEP, have a greate day</p>
-    <p>Who am i?</p>
-  </section>
+    <script>
+      let translations = null;
 
-  <section class="skills">
-    <h2>Skills</h2>
-    <div class="skills-content">
-      <img src="profile.jpg" alt="Profile Image">
-      <div class="skills-details">
-        <p><strong>Profile:</strong> 2D pixel art artist, Game Developer and .net dev </p>
-        <div><strong>2D pixel art artist</strong></div>
-        <div class="progress-bar">
-          <div class="progress" style="width: 80%;"></div>
-        </div>
-        <div><strong>Game Developer</strong></div>
-        <div class="progress-bar">
-          <div class="progress" style="width: 90%;"></div>
-        </div>
-        <div><strong>.net dev</strong></div>
-        <div class="progress-bar">
-          <div class="progress" style="width: 40%;"></div>
-        </div>
-      </div>
-    </div>
-</section>
+      // Завантаження JSON із перекладами
+      async function loadTranslations() {
+        const response = await fetch('example.json'); // Шлях до JSON із перекладом
+        translations = await response.json();
+      }
 
+      // Відображення даних на основі мови
+      function renderPage(language) {
+        if (!translations) return;
 
-  <section class="portfolio">
-    <h2>Portfolio</h2>
-    <div class="portfolio-content">
-      <div class="project">
-        <h3>Latest works</h3>
-        <p>Laboratorian works...</p>
-        <div class="button-container">
-          <a href="index1.html" class="btn">LB3</a>
-          <a href="index4.html" class="btn">LB4</a>
-          <a href="index5.html" class="btn">LB5</a>
-          <a href="index6.html" class="btn">LB6</a>
-          <a href="index7.html" class="btn">LB7</a>
-          <a href="index8.html" class="btn">LB8</a>
-          <a href="index9.html" class="btn">LB9</a>
-        </div>
-        
-      </div>
-    </div>
-  </section>
+        const data = translations[language];
+        populateHeader(data);
+        showHeroes(data);
+      }
 
-  <footer class="contact">
-    <h2>Get in Touch</h2>
-    <div class="contact-info">
-      <ul>
-        <li>Dribbble</li>
-        <li>Behance</li>
-        <li>CodePen</li>
-        <li>GitHub</li>
-        <li>Medium</li>
-      </ul>
-      <ul>
-        <li>LinkedIn</li>
-        <li>Facebook</li>
-        <li>Instagram</li>
-        <li>Twitter</li>
-      </ul>
-      <div class="contact-email">
-        <p>vasyl.yaskiv-ki2101@kep.nung.edu.ua</p>
-        <p>+380 979 029 597</p>
-      </div>
-    </div>
-  </footer>
+      // Заповнення заголовка
+      function populateHeader(data) {
+        const header = document.querySelector('header');
+        header.innerHTML = ''; // Очищення заголовка
+        const squadName = document.createElement('h1');
+        squadName.textContent = data.squadName;
+        header.appendChild(squadName);
 
-</body>
+        const details = document.createElement('p');
+        details.textContent = `Hometown: ${data.homeTown} // Formed: ${data.formed}`;
+        header.appendChild(details);
+      }
+
+      // Відображення героїв
+      function showHeroes(data) {
+        const section = document.querySelector('section');
+        section.innerHTML = ''; // Очищення секції
+        const members = data.members;
+
+        members.forEach((hero) => {
+          const article = document.createElement('article');
+          const h2 = document.createElement('h2');
+          h2.textContent = hero.name;
+          article.appendChild(h2);
+
+          const para1 = document.createElement('p');
+          para1.textContent = `Secret Identity: ${hero.secretIdentity}`;
+          article.appendChild(para1);
+
+          const para2 = document.createElement('p');
+          para2.textContent = `Age: ${hero.age}`;
+          article.appendChild(para2);
+
+          const powersList = document.createElement('ul');
+          hero.powers.forEach((power) => {
+            const listItem = document.createElement('li');
+            listItem.textContent = power;
+            powersList.appendChild(listItem);
+          });
+          article.appendChild(powersList);
+          section.appendChild(article);
+        });
+      }
+
+      // Слухачі для кнопок
+      document.getElementById('translate-ua').addEventListener('click', () => renderPage('ua'));
+      document.getElementById('translate-en').addEventListener('click', () => renderPage('en'));
+
+      // Початкове завантаження
+      async function initPage() {
+        await loadTranslations(); // Завантаження перекладів
+        renderPage('en'); // Завантаження англійською мовою за замовчуванням
+      }
+
+      initPage();
+    </script>
+  </body>
 </html>
